@@ -6,26 +6,27 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Log in form</title>
+    <link href="base.css" rel="stylesheet" />
     <link href="styles_log_in.css" rel="stylesheet">
   </head>
   <body>
-    <form class="form-signin">
-      <div class="text-center mb-4">
-        <h1 class="h1">WELCOME TO TABLE++</h1>
-      </div>
-      <div class="form-label-group">
+    <div class="container">
+    <form>
+      <h1 class="h1">WELCOME TO TABLE++</h1>
+      <div>
         <center>
-        <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+        <input type="text" id="inputUsername" placeholder="Username" required autofocus>
         </center>
       </div>
-      <div class="form-label-group">
+      <div>
         <center>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" id="inputPassword" placeholder="Password" required>
         </center>
       </div>
       <center>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+      <button type="submit">Log in</button>
       </center>
     </form>
+    </div>
   </body>
 </html>
