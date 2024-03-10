@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a table</table></title>
+  <link rel="stylesheet" href="create_table_styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<header class="header-container">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="header-icons">
+      <button class="notification-icon-btn"><i class="fas fa-bell"></i></button>
+      <button class="icon-btn account-icon" onclick="openAccount()"></button>
+      <button class="create-table-btn" onclick="createTable()">+ Create new table</table></button>
+    </div>
+</header>
+
+<div class="sidebar" id="sidebar">
+  <div class="logo">TABLE++</div>
+  <ul>
+    <li><a href="#">Tables</a></li>
+    <li><a href="#">Team</a></li>
+    <li><a href="#">Accessibility</a></li>
+  </ul>
+  <button class="close-sidebar-btn" onclick="closeSidebar()">✕</button>
+</div>
+
+<div class="container">
+<div class="content" id="content">
+  <h1>Create a table</h1>
+  <div class="input-container">
+    <input type="text" class="input-field" placeholder="Table title">
+    <input type="text" class="input-field" placeholder="Description">
+  </div>
+  <div class="button-container">
+    <button class="create-table-btn">Create a table</button>
+    <button class="cancel-btn">Cancel</button>
+  </div>
+
+<h2>Your columns</h2>
+  <ul class="column-list" id="columnList">
+  <li>
+    Column 1
+    <button class="column-type-btn">Type</button>
+    <button class="edit-btn"><i class="fas fa-pencil-alt"></i></button>
+    <button class="delete-btn"><i class="fas fa-trash-alt"></i></button>
+  </li>
+  <li>
+    Column 2
+    <button class="column-type-btn">Type</button>
+    <button class="edit-btn"><i class="fas fa-pencil-alt"></i></button>
+    <button class="delete-btn"><i class="fas fa-trash-alt"></i></button>
+  </li>
+  <li>
+    Column 3
+    <button class="column-type-btn">Type</button>
+    <button class="edit-btn"><i class="fas fa-pencil-alt"></i></button>
+    <button class="delete-btn"><i class="fas fa-trash-alt"></i></button>
+  </li>
+  <li>
+    Column 4
+    <button class="column-type-btn">Type</button>
+    <button class="edit-btn"><i class="fas fa-pencil-alt"></i></button>
+    <button class="delete-btn"><i class="fas fa-trash-alt"></i></button>
+  </li>
+  </ul>
+
+  <div class="add-columns">
+    <h2 class="sub-heading">Add columns</h2>
+    <div class="input-container">
+      <input type="text" id="columnTitleInput" class="input-field" placeholder="Column title">
+      <select id="columnTypeSelect" class="select-input input-field">
+        <option value="text">Text</option>
+        <option value="number">Number</option>
+        <option value="date">Date</option>
+        <option value="checkbox">Checkbox</option>
+        <option value="dropdown">Dropdown</option>
+        <option value="file">File</option>
+        <option value="link">Link</option>
+        <option value="email">Email</option>
+        <option value="phone">Phone</option>
+        <option value="time">Time</option>
+        <option value="currency">Currency</option>
+        <option value="percentage">Percentage</option>
+        <option value="rating">Rating</option>
+        <option value="duration">Duration</option>
+        <option value="formula">Formula</option>
+        <option value="image">Image</option>
+        <option value="video">Video</option>
+        <option value="audio">Audio</option>
+        <option value="location">Location</option>
+        <option value="address">Address</option>
+      </select>
+    </div>
+    <button class="create-table-btn" id="addColumnBtn">+ Add colunm</button>
+    <button class="cancel-btn" id="cleanAllBtn">Clean all</button>
+  </div>
+</div>
+</div>
+<script src="create_table_script.js"></script>
+</body>
+</html>
