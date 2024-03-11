@@ -1,0 +1,10 @@
+.search-field {
+  width: 25%;
+  height: 35px;
+}
+
+.icon {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
