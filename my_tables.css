@@ -3,8 +3,8 @@
   height: 35px;
 }
 
-.icon {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
+.fa-search {
+  margin-left: 10px;
+  color: #1e0b69;
+  font-size: 18px;
 }
