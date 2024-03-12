@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table template</title>
+  <link rel="stylesheet" href="my_base.css">
+  <link rel="stylesheet" href="table_template.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<header class="header-container">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="header-icons">
+      <button class="notification-icon-btn"><i class="fas fa-bell"></i></button>
+      <button class="icon-btn account-icon" onclick="openAccount()">✕</button>
+      <button class="create-table-btn" onclick="createTable()">+ Create new table</button>
+    </div>
+</header>
+
+<div class="sidebar" id="sidebar">
+  <div class="logo">TABLE++</div>
+  <ul>
+    <li><a href="#">Tables</a></li>
+    <li><a href="#">Team</a></li>
+    <li><a href="#">Accessibility</a></li>
+  </ul>
+  <button class="close-sidebar-btn" onclick="closeSidebar()">✕</button>
+</div>
+
+<div class="container">
+<div class="content" id="content">
+  <h1>Table template</h1>
+  <button class="edit-table-btn"><i class="fas fa-pencil-alt"></i> Edit Table</button>
+  <button class="filter-btn"><i class="fas fa-filter"></i> Filters</button>
+  <button class="import-btn"><i class="fas fa-file-import"></i> Import</button>
+  <button class="export-btn"><i class="fas fa-file-export"></i> Export</button>
+</div>
+</div>
+<script src="my_tables_script.js"></script>
+</body>
+</html>
