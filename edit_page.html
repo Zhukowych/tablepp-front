@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a table &lt;/table&gt;
+    </title>
+   
+    <link rel="stylesheet" href="edit_page_files/base.css">
+    <link rel="stylesheet" href="edit_page_files/all.min.css">
+    
+    <script src="edit_page_files/jquery.js"></script> 
+    <script src="edit_page_files/bootstrap.js"></script> 
+    <script src="edit_page_files/feather.min.js"></script>
+    <script src="edit_page_files/jquery.min.js"></script>
+    <script src="edit_page_files/jquery.init.js"></script>
+    <script src="edit_page_files/base.js"> </script>
+
+    <link href="edit_page_files/base.css" rel="stylesheet"> 
+    <link href="edit_page_files/formset.css" rel="stylesheet"> 
+    <link href="edit_page_files/tabs.css" rel="stylesheet"> 
+    <link href="edit_page_files/table.css" rel="stylesheet"> 
+
+    <style>
+      svg {
+        vertical-align: bottom;
+      }
+
+    </style>
+    
+    
+    <script src="edit_page_files/jquery.formset.js"></script>
+
+    <style>
+
+
+    </style>
+
+
+
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="header-icons">
+        <button class="notification-icon-btn">
+          <i class="fas fa-bell"></i>
+        </button>
+        <button class="icon-btn account-icon" onclick="openAccount()"></button>
+
+        <form method="post" action="/user/logout/">
+            <input type="hidden" name="csrfmiddlewaretoken" value="pQWoVDGNyFKecbD7Y07mHjG2bVCxo4QwPRO1FO5dJ3PITqSXB86M94FShvHYthB7">
+            <button type="submit" class="cancel-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out" style="width:12px;height:12px;"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg></button>
+        </form>
+      </div>
+    </header>
+    <div class="sidebar active" id="sidebar">
+      <div class="logo">TABLE++</div>
+      <ul>
+        <li>
+          <a href="http://localhost:8000/table/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-table"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"></path></svg>Tables</a>
+        </li>
+        <li>
+          <a href="http://localhost:8000/user/list/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>User</a>
+        </li>
+        <li>
+          <a href="http://localhost:8000/user/groups/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>User groups</a>
+        </li>
+        <li>
+          <a href="http://localhost:8000/user/role/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>Roles</a>
+        </li>
+        <li>
+          <a href="http://localhost:8000/logs/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>Logs</a>
+        </li>
+      </ul>
+      <button class="close-sidebar-btn" onclick="closeSidebar()">✕</button>
+    </div>
+    <div class="container">
+
+
+      <div class="content" id="content" style="margin-left: 250px;">
+            
+        
+
+
+    <h1>Edit object</h1>
+
+
+
+<div class="col-md-4">
+    <form action="" method="post">
+        <input type="hidden" name="csrfmiddlewaretoken" value="yWKCCsaLjRvwQHhJ4zUwVFcDQC46Zl6wYXCfmDzbufA0xWwzHHTWnqbtWc9x4yR7">
+
+        <table class="form-table">
+            
+                <tbody><tr>
+                    <td><label for="id_column_6fa92b36f3780c3867a7d8381ae0a06d">Name:</label></td>
+                    <td>
+                        <input type="text" name="column_6fa92b36f3780c3867a7d8381ae0a06d" value="test" maxlength="64" class="input-field" id="id_column_6fa92b36f3780c3867a7d8381ae0a06d"><br>
+                        
+                    </td>
+
+                </tr>
+            
+                <tr>
+                    <td><label for="id_column_ae8ec870e121320de94c1ffbac5f0206">Location:</label></td>
+                    <td>
+                        <input type="text" name="column_ae8ec870e121320de94c1ffbac5f0206" value="test2" maxlength="64" class="input-field" id="id_column_ae8ec870e121320de94c1ffbac5f0206"><br>
+                        
+                    </td>
+
+                </tr>
+            
+                <tr>
+                    <td><label for="id_column_65b8d787dfbe2301024a18f9c575ba8d">Count:</label></td>
+                    <td>
+                        <input type="number" name="column_65b8d787dfbe2301024a18f9c575ba8d" class="input-field" id="id_column_65b8d787dfbe2301024a18f9c575ba8d"><br>
+                        
+                    </td>
+
+                </tr>
+            
+        </tbody></table>
+
+        <div class="action-buttons">
+            <input type="submit" class="save-btn" value="Save">
+            <a href="http://localhost:8000/table/33/list/">
+                <button class="cancel-btn" type="button">Back to the list</button>
+            </a>
+            
+                <a href="http://localhost:8000/table/33/2/delete/">
+                    <button class="delete-btn" type="button">Delete object</button>
+                </a>
+                <a href="http://localhost:8000/table/33/add/">
+                    <button class="save-btn" type="button">Add one more</button>
+                </a>
+            
+        </div>
+
+    </form>
+</div>
+
+<script type="text/javascript">
+    $('.formset_row').formset({
+        addText: 'add column',
+        deleteText: 'remove',
+        prefix: 'column_set'
+    });
+</script>
+
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      toggleMenu();
+      feather.replace();
+    </script>
+
+  
+</body></html>
