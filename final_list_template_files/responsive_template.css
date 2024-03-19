@@ -7,35 +7,80 @@
     font-size: 14px;
   }
 
-  table {
+  .temp-table table {
     table-layout: auto;
-    width: 100%;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .temp-table td,
+  .temp-table th {
+    width: auto;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
   table p {
     font-size: 10px;
   }
 
-  th {
-    font-size: 14px;
-    padding: 10px 10px;
-  }
-
   .text {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .integer {
-    font-size: 14px;
+    font-size: 12px;
   }
 
-  td {
-    font-size: 14px;
-    padding: 10px 10px;
-    align-items: center;
+  svg {
+    width: 20px;
+    height: 20px;
   }
 
-  .delete-btn {
+  .delete-btn .small {
     padding: 0px 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .temp-table td,
+  .temp-table th {
+    width: auto;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  th {
+    font-size: 12px;
+  }
+
+  .temp-table table p {
+    font-size: 12px;
+  }
+
+  a {
+    font-size: 12px;
+  }
+
+  .text {
+    font-size: 12px;
+  }
+
+  .integer {
+    font-size: 12px;
+  }
+
+  svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .current {
+    font-size: 12px;
   }
 }
