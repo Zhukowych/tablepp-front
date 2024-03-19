@@ -1,0 +1,41 @@
+@media (max-width: 768px) {
+  .current {
+    font-size: 14px;
+  }
+
+  a {
+    font-size: 14px;
+  }
+
+  table {
+    table-layout: auto;
+    width: 100%;
+  }
+
+  table p {
+    font-size: 10px;
+  }
+
+  th {
+    font-size: 14px;
+    padding: 10px 10px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  .integer {
+    font-size: 14px;
+  }
+
+  td {
+    font-size: 14px;
+    padding: 10px 10px;
+    align-items: center;
+  }
+
+  .delete-btn {
+    padding: 0px 0px;
+  }
+}
