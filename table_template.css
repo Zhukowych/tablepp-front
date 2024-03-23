@@ -1,34 +1,3 @@
-.edit-table-btn {
-  background-color: #D5DAFF;
-  border: 1px solid #4542d0;
-  color: #4542d0;
-  padding: 10px 10px;
-  margin-right: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.filter-btn,
-.import-btn,
-.export-btn {
-  background-color: transparent;
-  border: none;
-  color: #4542d0;
-  padding: 10px 10px;
-  margin-right: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.edit-table-btn:hover,
-.filter-btn:hover,
-.import-btn:hover,
-.export-btn:hover {
-  background-color: #4542d0;
-  color: #fff;
-  border-radius: 5px;
-}
-
 .actiom-btns {
   margin-bottom: 10px;
 }
@@ -72,4 +41,17 @@
   margin: 10px;
   color: #342A61;
   font-size: 14px;
+}
+
+svg {
+  vertical-align: bottom;
+}
+
+.object-list-container {
+  width: 60%;
+}
+
+.filter-button-container {
+  display: flex;
+  justify-content: right;
 }

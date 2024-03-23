@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin-right: 20px;
   font-family: "Inter", sans-serif;
   background-color: #eaedff;
 }
@@ -7,22 +7,14 @@ body {
 .content {
   /* text-align: center; */
   transition: margin-left 0.3s;
-  margin-top: -40px;
+  margin-top: -20px;
   /* margin-left: 20px; */
 }
 
 .container {
   width: 100%;
-  padding-left: 2%;
+  /* padding-left: 2%; */
 }
-
-/* .header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #ffffff;
-  z-index: 999;
-} */
 
 .header-container {
   display: flex;
@@ -146,6 +138,21 @@ h2 {
   margin-left: 15px;
 }
 
+.sidebar {
+  left: -250px;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #656fc7;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+}
+
+.sidebar.active {
+  margin-left: 250px;
+}
+
 .sidebar ul {
   list-style-type: none;
   padding: 0;
@@ -159,21 +166,6 @@ h2 {
 
 .sidebar ul li a:hover {
   color: #ccc;
-}
-
-.sidebar {
-  position: fixed;
-  left: -250px;
-  top: 0;
-  height: 100%;
-  width: 250px;
-  background-color: #656fc7;
-  padding-top: 60px;
-  transition: left 0.3s ease;
-}
-
-.sidebar.active {
-  margin-left: 250px;
 }
 
 .close-sidebar-btn {
@@ -202,15 +194,9 @@ h2 {
 }
 
 .content {
-  margin-left: 250px;
+  /* margin-left: 250px; */
   padding: 20px;
   transition: margin-left 0.3s;
-}
-
-@media (max-width: 768px) {
-  .content {
-    margin-left: 0;
-  }
 }
 
 .edit-table-btn {
@@ -276,14 +262,19 @@ h2 {
   border: none;
   background: none;
   cursor: pointer;
-}
-
-.edit-btn i,
-.delete-btn i {
-  color: #6859a7;
+  color: rgb(228, 122, 122);
 }
 
 .select-input {
-    height: 42px;
-    padding-right: 10px;
+  height: 42px;
+  padding-right: 10px;
+}
+
+.save-btn {
+  padding: 10px 20px;
+  background-color: #656fc7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

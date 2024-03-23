@@ -1,50 +1,14 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create a table &lt;/table&gt;
-    </title>
-    <link rel="stylesheet" href="tables_list_files/responsive_list.css">
-    <link rel="stylesheet" href="final_list_template_files/responsive_template.css">
-    <link rel="stylesheet" href="final_list_template_files/base.css">
-    <link rel="stylesheet" href="final_list_template_files/all.min.css">
-
-    <script src="final_list_template_files/jquery.js"></script> 
-    <script src="final_list_template_files/bootstrap.js"></script> 
-    <script src="final_list_template_files/feather.min.js"></script>
-    <script src="final_list_template_files/jquery.min.js"></script>
-    <script src="final_list_template_files/jquery.init.js"></script>
-    <script src="final_list_template_files/base.js"> </script>
-
-    <link href="final_list_template_files/base.css" rel="stylesheet"> 
-    <link href="final_list_template_files/formset.css" rel="stylesheet"> 
-    <link href="final_list_template_files/tabs.css" rel="stylesheet"> 
-    <link href="final_list_template_files/table.css" rel="stylesheet"> 
-
-    <style>
-      svg {
-        vertical-align: bottom;
-      }
-
-    </style>
-    
-    
-    <script src="final_list_template_files/jquery.formset.js"></script>
-    <style>
-
-        .object-list-container {
-            width: 60%;
-        }
-
-        .filter-button-container {
-            display: flex;
-            justify-content: right;
-        }
-
-    </style>
-
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table template</title>
+    <link rel="stylesheet" href="my_base.css" />
+    <link rel="stylesheet" href="final_list_template_files/table.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link href="final_list_template_files/tabs.css" rel="stylesheet">
+    <link href="final_list_template_files/responsive_template.css" rel="stylesheet">
 
   </head>
   <body>
@@ -89,26 +53,20 @@
     </div>
     <div class="container">
 
+      <div class="content" id="content">
 
-      <div class="content" id="content" style="margin-left: 250px;">
-            
-        
-
+    <h1>Stores list</h1>
     <div class="tabs">
     <ul>
         <li class="selected">
             <a href="http://localhost:8000/table/33/list/">List</a>
         </li>
-        <li class="">
+        <li class="selected">
             <a href="http://localhost:8000/table/33/edit/">Edit</a>
         </li>    
     </ul>
-</div>
-
-    <h1>Stores list</h1>
-
+  </div>
     <div class="object-list-container">
-
         <div class="actiom-btns">
             <a href="http://localhost:8000/table/33/add/">
                 <button class="save-btn">+ add new object</button>
@@ -129,106 +87,66 @@
         </div>
 
         <div class="table-temp">
-            
-            <table class="wide">
-                <thead>
-                <tr>
-                    <th class="abbr">Id</th>
-                    
-                        <th>name</th>
-                    
-                        <th>location</th>
-                    
-                        <th>count</th>
-                    
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                
-                    <tr>
-                        <td>1</td>
-                        
-                            
-                                <td class="text"><a href="http://localhost:8000/table/33/1/edit/">
-                                    q</a></td>
-                            
-                        
-                            
-                                <td class="text">
-                                    test</td>
-                            
-                        
-                            
-                                <td class="integer">
-                                    -99</td>
-                            
-                        
-                        <td>
-                            <a href="http://localhost:8000/table/33/1/delete/" class="delete-btn small">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-                            </a>
-                        </td>
-                    </tr>
-                
-                    <tr>
-                        <td>2</td>
-                        
-                            
-                                <td class="text"><a href="http://localhost:8000/table/33/2/edit/">
-                                    test</a></td>
-                            
-                        
-                            
-                                <td class="text">
-                                    test2</td>
-                            
-                        
-                            
-                                <td class="integer">
-                                    None</td>
-                            
-                        
-                        <td>
-                            <a href="http://localhost:8000/table/33/2/delete/" class="delete-btn small">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-                            </a>
-                        </td>
-                    </tr>
-                
-                </tbody>
-            </table>
+          <table>
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Count</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td class="text">
+                  <a href="http://localhost:8000/table/33/1/edit/">q</a>
+                </td>
+                <td>test</td>
+                <td>-99</td>
+                <td>
+                  <button type="button" class="delete-btn">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
 
-
+              <tr>
+                <td>2</td>
+                <td class="text">
+                  <a href="http://localhost:8000/table/33/2/edit/">test</a>
+                </td>
+                <td>test2</td>
+                <td>None</td>
+                <td>
+                  <button type="button" class="delete-btn">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="pagination">
-    <span class="step-links">
-        
 
-        <span class="current">
-            Page 1 of 2.
-        </span>
+                <div class="pagination">
+            <span class="step-links">
+              <span class="current"> Page 1 of 2. </span>
 
-        
-            <a href="http://localhost:8000/table/33/list/?page=2">next</a>
-            <a href="http://localhost:8000/table/33/list/?page=2">last »</a>
-        
-    </span>
-</div>
-    </div>
+              <a href="http://localhost:8000/table/33/list/?page=2">next</a>
+              <a href="http://localhost:8000/table/33/list/?page=2">last »</a>
+            </span>
+          </div>
+        </div>
 
-    <script type="text/javascript">
-        $('.open-filter-btn').click(function () {
+        <script type="text/javascript">
+          $(".open-filter-btn").click(function () {
             let filter_box = $(".filters-box");
             console.log(filter_box);
-            if (filter_box.is(":visible"))
-                filter_box.hide(500);
-            else
-                filter_box.show(500);
-        });
-
-    </script>
-
+            if (filter_box.is(":visible")) filter_box.hide(500);
+            else filter_box.show(500);
+          });
+        </script>
       </div>
     </div>
 
@@ -237,5 +155,8 @@
       feather.replace();
     </script>
 
-  
-</body></html>
+      </div>
+    </div>
+    <script src="create_table_script.js"></script>
+  </body>
+</html>

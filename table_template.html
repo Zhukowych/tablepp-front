@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Table template</title>
-    
     <link rel="stylesheet" href="my_base.css" />
     <link rel="stylesheet" href="table_template.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link href="final_list_template_files/tabs.css" rel="stylesheet"> 
+
   </head>
   <body>
     <header class="header-container">
@@ -23,126 +21,143 @@
         <button class="notification-icon-btn">
           <i class="fas fa-bell"></i>
         </button>
-        <button class="icon-btn account-icon" onclick="openAccount()">✕</button>
-        <button class="create-table-btn" onclick="createTable()">
-          + Create new table
-        </button>
+        <button class="icon-btn account-icon" onclick="openAccount()"></button>
+
+        <form method="post" action="/user/logout/">
+            <input type="hidden" name="csrfmiddlewaretoken" value="fzbiNXMkdQUTRolTlMcMptOMyJ03gt8eFA3Vx8bKoeZnyDAJYUbcReNCEj5ulGTP">
+            <button type="submit" class="cancel-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out" style="width:12px;height:12px;"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg></button>
+        </form>
       </div>
     </header>
-
-    <div class="sidebar" id="sidebar">
+    <div class="sidebar active" id="sidebar">
       <div class="logo">TABLE++</div>
       <ul>
-        <li><a href="#">Tables</a></li>
-        <li><a href="#">Team</a></li>
-        <li><a href="#">Accessibility</a></li>
+        <li>
+          <a href="http://localhost:8000/table/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-table"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"></path></svg>Tables</a>
+        </li>
+        <li>
+          <a href="http://localhost:8000/user/list/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>User</a>
+        </li>
+        <li>
+          <a href="http://localhost:8000/user/groups/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>User groups</a>
+        </li>
+        <li>
+          <a href="http://localhost:8000/user/role/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>Roles</a>
+        </li>
+        <li>
+          <a href="http://localhost:8000/logs/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>Logs</a>
+        </li>
       </ul>
       <button class="close-sidebar-btn" onclick="closeSidebar()">✕</button>
     </div>
-
     <div class="container">
+
+
       <div class="content" id="content">
-        <h1>Table template</h1>
+
+    <div class="tabs">
+    <ul>
+        <li class="selected">
+            <a href="http://localhost:8000/table/33/list/">List</a>
+        </li>
+        <li class="">
+            <a href="http://localhost:8000/table/33/edit/">Edit</a>
+        </li>    
+    </ul>
+  </div>
+
+    <h1>Stores list</h1>
+    <div class="object-list-container">
         <div class="actiom-btns">
-          <button class="edit-table-btn">
-            <i class="fas fa-pencil-alt"></i> Edit Table
-          </button>
-          <button class="filter-btn">
-            <i class="fas fa-filter"></i> Filters
-          </button>
-          <button class="import-btn">
-            <i class="fas fa-file-import"></i> Import
-          </button>
-          <button class="export-btn">
-            <i class="fas fa-file-export"></i> Export
-          </button>
+            <a href="http://localhost:8000/table/33/add/">
+                <button class="save-btn">+ add new object</button>
+            </a>
+            
+        </div>
+        <div class="filters-box" hidden="">
+            <form action="#" method="get">
+                <table class="filter-table">
+                    
+                </table>
+                <div class="filter-button-container">
+                    <button class="filter-btn" type="submit">
+                        Filter
+                    </button>
+                </div>
+            </form>
         </div>
 
         <div class="table-temp">
           <table>
             <thead>
               <tr>
-                <th><input type="checkbox" id="selectAll"></th>
-                <th>User</th>
-                <th>Last seen</th>
-                <th>Position</th>
-                <th>Status</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Count</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><input type="checkbox" id="selectAll"></td>
-                <td>
-                    <p class="user-name">Alex Ray</p>
-                    <p class="username">alex_ray</p>
+                <td>1</td>
+                <td class="text">
+                  <a href="http://localhost:8000/table/33/1/edit/">q</a>
                 </td>
+                <td>test</td>
+                <td>-99</td>
                 <td>
-                    <p class="last-day">Today</p>
-                    <p class="last-time">11.11 pm</p>
-                </td>
-                <td>
-                  <p class="job-title">Finance Consultant</p>
-                  <p class="position-level">Department head</p>
-                </td>
-                <td>
-                  <span class="status-label">Active</span>
-                </td>
-                <td>
-                  <button type="button" class="edit-btn"><i class="fas fa-pencil-alt"></i></button>
-                  <button type="button" class="delete-btn"><i class="fas fa-trash-alt"></i></button>
+                  <button type="button" class="delete-btn">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
                 </td>
               </tr>
 
               <tr>
-                <td><input type="checkbox" id="selectAll"></td>
-                <td>
-                    <p class="user-name">John Doe</p>
-                    <p class="username">john_doe</p>
+                <td>2</td>
+                <td class="text">
+                  <a href="http://localhost:8000/table/33/2/edit/">test</a>
                 </td>
+                <td>test2</td>
+                <td>None</td>
                 <td>
-                    <p class="last-day">Monday</p>
-                    <p class="last-time">7.20 pm</p>
-                </td>
-                <td>
-                  <p class="job-title">Software engineer</p>
-                  <p class="position-level">Senior</p>
-                </td>
-                <td>
-                  <span class="status-label">Passive</span>
-                </td>
-                <td>
-                  <button type="button" class="edit-btn"><i class="fas fa-pencil-alt"></i></button>
-                  <button type="button" class="delete-btn"><i class="fas fa-trash-alt"></i></button>
+                  <button type="button" class="delete-btn">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
                 </td>
               </tr>
-              <tr>
-              <td><input type="checkbox" id="selectAll"></td>
-              <td>
-                    <p class="user-name">Kate Hunington</p>
-                    <p class="username">kate_hunington</p>
-                </td>
-                <td>
-                    <p class="last-day">Friday</p>
-                    <p class="last-time">00.10 am</p>
-                </td>
-                <td>
-                  <p class="job-title">Designer</p>
-                  <p class="position-level">Middle</p>
-                </td>
-                <td>
-                  <span class="status-label">Awaiting</span>
-                </td>
-                <td>
-                  <button type="button" class="edit-btn"><i class="fas fa-pencil-alt"></i></button>
-                  <button type="button" class="delete-btn"><i class="fas fa-trash-alt"></i></button>
-                </td>
-              <tr>
             </tbody>
           </table>
         </div>
+      
+                <div class="pagination">
+            <span class="step-links">
+              <span class="current"> Page 1 of 2. </span>
+
+              <a href="http://localhost:8000/table/33/list/?page=2">next</a>
+              <a href="http://localhost:8000/table/33/list/?page=2">last »</a>
+            </span>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          $(".open-filter-btn").click(function () {
+            let filter_box = $(".filters-box");
+            console.log(filter_box);
+            if (filter_box.is(":visible")) filter_box.hide(500);
+            else filter_box.show(500);
+          });
+        </script>
       </div>
     </div>
-    <script src="my_tables_script.js"></script>
+
+    <script type="text/javascript">
+      toggleMenu();
+      feather.replace();
+    </script>
+
+      </div>
+    </div>
+    <script src="create_table_script.js"></script>
   </body>
 </html>
