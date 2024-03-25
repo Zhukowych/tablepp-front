@@ -32,28 +32,4 @@
   h1 {
     font-size: 32px;
   }
-
-  .sidebar {
-  left: -100%;
-  position: fixed;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #656fc7;
-  padding-top: 60px;
-  transition: left 0.3s ease;
-  }
-
-  .sidebar.active {
-    margin-left: 100%;
-  }
-
-  .close-sidebar-btn {
-    right: 35%;
-    top: 20px;
-  }
-
-  /* .tabs {
-    margin-top: -1000px;
-  } */
 }

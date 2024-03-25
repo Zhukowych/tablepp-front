@@ -3,12 +3,11 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create a table &lt;/table&gt;
-    </title>
-    <link rel="stylesheet" href="edit_page_files/responsive_edit.css">
-    <link rel="stylesheet" href="tables_list_files/responsive_list.css">
+    <title>Create a table</title>
+    <link rel="stylesheet" href="edit_page_files/edit.css">
     <link rel="stylesheet" href="edit_page_files/base.css">
     <link rel="stylesheet" href="edit_page_files/all.min.css">
+    <link rel="stylesheet" href="sidebar_responsive.css">
     
     <script src="edit_page_files/jquery.js"></script> 
     <script src="edit_page_files/bootstrap.js"></script> 
@@ -17,7 +16,6 @@
     <script src="edit_page_files/jquery.init.js"></script>
     <script src="edit_page_files/base.js"> </script>
 
-    <link href="edit_page_files/base.css" rel="stylesheet"> 
     <link href="edit_page_files/formset.css" rel="stylesheet"> 
     <link href="edit_page_files/tabs.css" rel="stylesheet"> 
     <link href="edit_page_files/table.css" rel="stylesheet"> 
@@ -127,18 +125,19 @@
         </tbody></table>
 
         <div class="action-buttons">
-            <input type="submit" class="save-btn" value="Save">
-            <a href="http://localhost:8000/table/33/list/">
-                <button class="cancel-btn" type="button">Back to the list</button>
+            <button class="save-btn" type="button">Save</button>
+            <!-- <a href="http://localhost:8000/table/33/list/"> -->
+            <button class="cancel-btn" type="button">Back to the list</button>
             </a>
-            
+        </div>
+        <div class="object-buttons">
                 <a href="http://localhost:8000/table/33/2/delete/">
                     <button class="delete-btn" type="button">Delete object</button>
                 </a>
                 <a href="http://localhost:8000/table/33/add/">
                     <button class="save-btn" type="button">Add one more</button>
                 </a>
-            
+        </div>
         </div>
 
     </form>
