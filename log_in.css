@@ -1,23 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 body {
-  font-family: "Inter", sans-serif;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    font-family: "Inter", sans-serif;
 }
 
 .container {
-  margin-left: 40px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 h1 {
   font-weight: bold;
   color: #1e0b69;
   font-size: 48px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -36,13 +40,13 @@ span {
 }
 
 form {
-  max-width: 350px;
+  width: 80%;
   padding: 15px;
 }
 
 input {
   height: 50px;
-  width: 350px;
+  width: 100%;
   border: none;
   border-radius: 10px;
   box-shadow: none;
